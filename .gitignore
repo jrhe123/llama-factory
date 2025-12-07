@@ -1,0 +1,111 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# PyTorch
+*.pth
+*.pt
+*.ckpt
+*.pkl
+
+# Machine Learning / Data
+*.h5
+*.hdf5
+*.model
+models/
+checkpoints/
+data/
+datasets/
+*.csv
+*.tsv
+*.json
+*.parquet
+
+# Label Studio
+label-studio-data/
+.mylabelstudio/
+label_studio_db.sqlite3
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Docker
+.dockerignore
+
+# Output files
+outputs/
+results/
+experiments/
+runs/
+wandb/
+tensorboard/
+
+# Configuration files with sensitive data
+config.yaml
+config.yml
+*.secret
+secrets.yaml
+
