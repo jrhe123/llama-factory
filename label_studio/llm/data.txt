@@ -1,0 +1,92 @@
+Below is the correct and safest way to manage account access in GCP and assign a role (e.g., Storage Object Admin / Storage Admin / Owner) to a user email.
+
+✅ How to Grant GCP IAM Access (e.g., Storage Owner) to an Email
+
+GCP manages access through IAM (Identity and Access Management).
+To give someone access (e.g., a Gmail or Workspace email), follow these steps:
+
+1. Go to the IAM Page
+
+Open the Google Cloud Console:
+https://console.cloud.google.com/
+
+Select your project (top left dropdown).
+
+Go to:
+IAM & Admin → IAM
+
+2. Add the User
+
+Click “Grant Access” (top of IAM page)
+
+Enter the email (Gmail, Workspace, service account, etc.)
+
+Choose roles.
+
+3. Select the right Storage role
+❗Important: “Storage Owner” is NOT recommended for production
+
+It grants full control over buckets and data, including deletion.
+
+Instead, use:
+
+Common Storage IAM roles
+Role	Description
+Storage Admin	Manage buckets + all objects (full admin)
+Storage Object Admin	Manage objects but not buckets
+Storage Object Creator	Write-only
+Storage Object Viewer	Read-only
+Example for full access to objects:
+
+Role → Storage → Storage Object Admin
+
+4. (Optional) Restrict to a specific bucket
+
+If you don’t want to give project-wide access:
+
+Go to Cloud Storage → Browser
+
+Click the bucket
+
+Go to Permissions
+
+Click Grant Access
+
+Add the same roles at the bucket-level only
+
+5. Save
+
+Click Save and the user will receive an email invitation.
+
+🚨 Notes & Best Practices
+1. Use the Principle of Least Privilege
+
+Only give the minimum role required.
+
+2. Avoid giving “Owner”
+
+Use “Owner” only in extreme cases.
+
+3. For applications, use Service Accounts, not personal emails
+
+Service accounts can hold roles without involving humans.
+
+🧪 Example Use Case
+📌 If you want your teammate to manage all files in a bucket:
+
+Steps:
+
+IAM → Grant Access
+
+Enter team@example.com
+
+Add role: Storage Object Admin
+
+Done.
+
+If you want, I can also prepare:
+
+✅ A recommended IAM structure for multi-tenant SaaS
+✅ A baseline IAM policy for GKE + Cloud SQL + Redis + Pub/Sub
+✅ How to use Service Accounts + Workload Identity on GKE
+Just tell me: “give me the full IAM architecture for MANA POCT”
