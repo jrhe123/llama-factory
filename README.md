@@ -62,8 +62,12 @@ pip install label-studio
 ### Start Label Studio
 
 ```bash
+cmd:
 source venv/bin/activate  # Activate virtual environment first
 label-studio
+
+visit:
+http://localhost:8080/projects/2/data/export
 ```
 
 Label Studio will be available at `http://localhost:8080`
